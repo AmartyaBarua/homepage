@@ -3,8 +3,11 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { css, jsx } from "@emotion/core"; //need this instead of {css}
+import { css, jsx } from "@emotion/core";
 import facepaint from "facepaint";
+
+import home from "./home.png";
+import mark from "./GitHub-Mark-64px.png";
 
 const mq = facepaint([
   "@media(min-width: 420px)",
@@ -14,64 +17,112 @@ const mq = facepaint([
 
 const headerStyle = css(
   mq({
-    backgroundColor: "#000154",
+    backgroundColor: "#A09F9F",
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "space-between",
     alignContent: "center",
     alignItems: "center",
-    height: ["7em", "10em", "15em", "20em"], //media query working
+    height: ["4em", "7em", "7em", "7em"], //media query working
   })
 );
 
 const groupStyle = css(
   mq({
-    display: ["none", "flex", "flex", "flex"],
+    display: ["none", "none", "flex"],
     flexFlow: "row nowrap",
-    justifyContent: "space-betwee",
+    justifyContent: "space-between",
     alignContent: "center",
+  })
+);
+
+const groupStyleMobile = css(
+  mq({
+    display: ["flex", "flex", "none"],
+    flexFlow: "row nowrap",
+    justifyContent: "space-between",
+    alignContent: "center",
+  })
+);
+
+const homeIconSize = css(
+  mq({
+    width: ["32px", "32px", "64px"],
+    height: ["32px", "64"],
+    marginLeft: ".4em",
+    marginBottom: ["none", "none", "2em"],
   })
 );
 
 const Header = () => (
   <div className="header" css={headerStyle}>
-    <div className="home">
-      <a
-        href="/index"
-        className="link"
-        css={{ color: "white", marginLeft: ".4em" }}
-      >
-        Home
+    <div
+      className="home"
+      css={{
+        display: "flex",
+        flexFlow: "row nowrap",
+        justifyContent: "space-between",
+        alignContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <a href="/index" className="link" css={{ marginLeft: ".4em" }}>
+        <div css={homeIconSize}>
+          <img
+            src={home}
+            alt="home"
+            css={{ maxWidth: "100%", height: "auto" }}
+          ></img>
+        </div>
       </a>
+    </div>
+    <div className="group-mobile" css={groupStyleMobile}>
+      <div css={{ width: "32px", height: "32px", marginRight: ".8em" }}>
+        <a href="/github" className="github-mobile">
+          <img
+            src={mark}
+            alt="Mark"
+            css={{ maxWidth: "100%", height: "auto" }}
+          ></img>
+        </a>
+      </div>
     </div>
     <div className="group" css={groupStyle}>
       <a
         href="/github"
         className="github"
-        css={{ color: "white", marginRight: ".4em" }}
+        css={{
+          color: "#262626",
+          textDecoration: "none",
+          marginRight: ".8em",
+          fontSize: ["none", "none", "1.6em", "2em"],
+        }}
       >
         GitHub
       </a>
       <a
         href="/contact"
         className="blog"
-        css={{ color: "white", marginRight: ".4em" }}
+        css={{
+          color: "#262626",
+          textDecoration: "none",
+          marginRight: ".8em",
+          fontSize: ["none", "none", "1.6em", "2em"],
+        }}
       >
         Blog
       </a>
       <a
         href="/connect"
         className="connect"
-        css={{ color: "white", marginRight: ".4em" }}
+        css={{
+          color: "#262626",
+          textDecoration: "none",
+          marginRight: ".8em",
+          fontSize: ["none", "none", "1.6em", "2em"],
+        }}
       >
-        LinkedIn
-      </a>
-      <a
-        href="/pictures"
-        className="photos"
-        css={{ color: "white", marginRight: ".4em" }}
-      >
-        Photography
+        Connect
       </a>
     </div>
   </div>
