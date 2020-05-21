@@ -20,7 +20,16 @@ const headerStyle = css(
     justifyContent: "space-between",
     alignContent: "center",
     alignItems: "center",
-    height: ["5em", "10em", "15em", "20em"], //media query working
+    height: ["7em", "10em", "15em", "20em"], //media query working
+  })
+);
+
+const groupStyle = css(
+  mq({
+    display: ["none", "flex", "flex", "flex"],
+    flexFlow: "row nowrap",
+    justifyContent: "space-betwee",
+    alignContent: "center",
   })
 );
 
@@ -35,7 +44,7 @@ const Header = () => (
         Home
       </a>
     </div>
-    <div className="group">
+    <div className="group" css={groupStyle}>
       <a
         href="/github"
         className="github"
