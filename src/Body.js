@@ -20,6 +20,8 @@ const bodyStyle = css(
     justifyContent: ["space-evenly"],
     alignItems: ["center", "center", "flex-start", "flex-start"],
     alignContent: "space-around",
+    backgroundColor: "#EAE7DC",
+    height: "100vh",
   })
 );
 

@@ -8,6 +8,7 @@ import facepaint from "facepaint";
 
 import home from "./home.png";
 import mark from "./GitHub-Mark-64px.png";
+import linkedin from "./linkedin-logo.png";
 
 const mq = facepaint([
   "@media(min-width: 420px)",
@@ -17,7 +18,7 @@ const mq = facepaint([
 
 const headerStyle = css(
   mq({
-    backgroundColor: "#A09F9F",
+    backgroundColor: "#D8C3A4",
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "space-between",
@@ -54,6 +55,28 @@ const homeIconSize = css(
   })
 );
 
+const headerFontStyle = css(
+  mq({
+    color: "#514E4E",
+    textDecoration: "none",
+    marginRight: ".8em",
+    fontSize: ["none", "none", "1.6em", "2em"],
+    textShadow: "5px 5px 5px #8E8D8A",
+  })
+);
+
+const homeFontStyle = css(
+  mq({
+    marginLeft: ".8em",
+    backgroundColor: "#D8C3A4",
+    color: "#514E4E",
+    padding: ".2em",
+    textDecoration: "none",
+    textShadow: "5px 5px 5px #8E8D8A",
+    fontSize: ["1.2em", "1.2em", "1.6em", "2em"],
+  })
+);
+
 const Header = () => (
   <div className="header" css={headerStyle}>
     <div
@@ -66,14 +89,15 @@ const Header = () => (
         alignItems: "center",
       }}
     >
-      <a href="/index" className="link" css={{ marginLeft: ".4em" }}>
-        <div css={homeIconSize}>
+      <a href="/index" className="link" css={homeFontStyle}>
+        Home
+        {/* <div css={homeIconSize}>
           <img
             src={home}
             alt="home"
             css={{ maxWidth: "100%", height: "auto" }}
           ></img>
-        </div>
+        </div> */}
       </a>
     </div>
     <div className="group-mobile" css={groupStyleMobile}>
@@ -86,42 +110,24 @@ const Header = () => (
           ></img>
         </a>
       </div>
+      <div css={{ width: "32px", height: "32px", marginRight: ".8em" }}>
+        <a href="/linkedin" className="linkedin-mobile">
+          <img
+            src={linkedin}
+            alt="LinkedIn"
+            css={{ maxWidth: "100%", height: "auto" }}
+          ></img>
+        </a>
+      </div>
     </div>
     <div className="group" css={groupStyle}>
-      <a
-        href="/github"
-        className="github"
-        css={{
-          color: "#262626",
-          textDecoration: "none",
-          marginRight: ".8em",
-          fontSize: ["none", "none", "1.6em", "2em"],
-        }}
-      >
+      <a href="/github" className="github" css={headerFontStyle}>
         GitHub
       </a>
-      <a
-        href="/contact"
-        className="blog"
-        css={{
-          color: "#262626",
-          textDecoration: "none",
-          marginRight: ".8em",
-          fontSize: ["none", "none", "1.6em", "2em"],
-        }}
-      >
+      <a href="/contact" className="blog" css={headerFontStyle}>
         Blog
       </a>
-      <a
-        href="/connect"
-        className="connect"
-        css={{
-          color: "#262626",
-          textDecoration: "none",
-          marginRight: ".8em",
-          fontSize: ["none", "none", "1.6em", "2em"],
-        }}
-      >
+      <a href="/connect" className="connect" css={headerFontStyle}>
         Connect
       </a>
     </div>
