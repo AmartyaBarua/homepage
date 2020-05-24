@@ -17,7 +17,7 @@ const bodyStyle = css(
   mq({
     display: "flex",
     flexFlow: ["column nowrap", "column nowrap", "row nowrap", "row nowrap"],
-    justifyContent: ["space-evenly"],
+    justifyContent: ["flex-start"],
     alignItems: ["center", "center", "flex-start", "flex-start"],
     alignContent: "space-around",
     backgroundColor: "#EAE7DC",

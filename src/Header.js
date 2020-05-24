@@ -102,7 +102,7 @@ const Header = () => (
     </div>
     <div className="group-mobile" css={groupStyleMobile}>
       <div css={{ width: "32px", height: "32px", marginRight: ".8em" }}>
-        <a href="/github" className="github-mobile">
+        <a href="https://github.com/AmartyaBarua" className="github-mobile">
           <img
             src={mark}
             alt="Mark"
@@ -111,7 +111,10 @@ const Header = () => (
         </a>
       </div>
       <div css={{ width: "32px", height: "32px", marginRight: ".8em" }}>
-        <a href="/linkedin" className="linkedin-mobile">
+        <a
+          href="https://www.linkedin.com/in/amartya-barua-01190118a"
+          className="linkedin-mobile"
+        >
           <img
             src={linkedin}
             alt="LinkedIn"
@@ -121,13 +124,25 @@ const Header = () => (
       </div>
     </div>
     <div className="group" css={groupStyle}>
-      <a href="/github" className="github" css={headerFontStyle}>
+      <a
+        href="https://github.com/AmartyaBarua"
+        className="github"
+        css={headerFontStyle}
+      >
         GitHub
       </a>
-      <a href="/contact" className="blog" css={headerFontStyle}>
+      <a
+        href="https://medium.com/@amartyabarua"
+        className="blog"
+        css={headerFontStyle}
+      >
         Blog
       </a>
-      <a href="/connect" className="connect" css={headerFontStyle}>
+      <a
+        href="https://www.linkedin.com/in/amartya-barua-01190118a"
+        className="connect"
+        css={headerFontStyle}
+      >
         Connect
       </a>
     </div>
