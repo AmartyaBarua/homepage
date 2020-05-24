@@ -13,8 +13,8 @@ const mq = facepaint([
 const billBoardStyle = css(
   mq({
     margin: ".6em",
-    padding: ".2em",
-    backgroundColor: "#D3F2F9",
+    padding: ".6em",
+    backgroundColor: "#F7A298",
     borderRadius: ".4em",
   })
 );
@@ -25,8 +25,13 @@ const descriptionStyle = css(
     marginRight: ".6em",
     marginBottom: ".4em",
     marginTop: ".2em",
-    padding: ".2em",
+    padding: ".6em",
     backgroundColor: "#1F0F0",
+    borderLeft: "solid 1px #F7A298",
+    borderBottom: "solid 1px #F7A298",
+    borderRight: "solid 1px #F7A298",
+    display: "flex",
+    flexFlow: "column nowrap",
   })
 );
 
@@ -52,7 +57,9 @@ class Collapsible extends React.Component {
         {this.state.open ? (
           <div className="description" css={descriptionStyle}>
             {this.props.children}
-            <a href={this.props.link}>here</a>
+            <div css={{ marginTop: ".6em", marginBottom: ".6em" }}>
+              <a href={this.props.link}>here</a>
+            </div>
           </div>
         ) : null}
       </div>
