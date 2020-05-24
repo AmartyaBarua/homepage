@@ -31,7 +31,7 @@ const bigDisplay = css(
     backgroundColor: "#F1F0F0",
     flexFlow: "column nowrap",
     borderRadius: "1em",
-    width: "65%",
+    width: "75%",
     height: "auto",
     marginTop: "2em",
     marginLeft: "2em",
@@ -88,10 +88,12 @@ function Body() {
   return (
     <div className="body" css={bodyStyle}>
       <div className="bigDisplay" css={bigDisplay}>
-        <div css={{ marginLeft: "1em", marginTop: "1em" }}>{project}</div>
+        <div css={{ marginLeft: ".8em", marginTop: ".8em", fontSize: "1.4em" }}>
+          {project}
+        </div>
         {(function () {
           switch (project) {
-            case "Python":
+            case "python":
               return (
                 <div
                   css={{
@@ -103,22 +105,22 @@ function Body() {
                   <Collapsible
                     title="Nobias Data Visualization App"
                     children="Single page application to visualize trends in user browsing
-                    history"
-                    link="/here"
+                    history. Made for Nobias as part of my interview."
+                    link="https://github.com/AmartyaBarua/nobias-data-visualisation"
                   />
                   <Collapsible
                     title="Kaggle CareerCon 2019"
                     children="Kaggle machine learning competition. 89% model accuracy."
-                    link="/link"
+                    link="https://github.com/AmartyaBarua/Kaggle-CareerCon-2019"
                   />
                   <Collapsible
                     title="Animation Recommender System"
                     children="Netflix like recommender system. Made with Python."
-                    link="/link"
+                    link="https://github.com/AmartyaBarua/AnimationRecommenderSystem"
                   />
                 </div>
               );
-            case "C++":
+            case "c++":
               return (
                 <div
                   css={{
@@ -130,11 +132,11 @@ function Body() {
                   <Collapsible
                     title="Predator Prey Simulation"
                     children="This simulation explores the mathematical model proposed by Alfred Lotka (1910) and Vito Volterra (1926)."
-                    link="/here"
+                    link="https://github.com/AmartyaBarua/Predator_Prey_Simulation/blob/master/Predator_Prey_Simulation/main.cpp"
                   />
                 </div>
               );
-            case "C":
+            case "c":
               return (
                 <div
                   css={{
@@ -146,11 +148,11 @@ function Body() {
                   <Collapsible
                     title="tail.c"
                     children="Tail function for the XV6 operating system released by MIT."
-                    link="/here"
+                    link="https://github.com/AmartyaBarua/XV6-tail.c/blob/master/tail.c"
                   />
                 </div>
               );
-            case "MATLAB":
+            case "matlab":
               return (
                 <div
                   css={{
@@ -162,11 +164,11 @@ function Body() {
                   <Collapsible
                     title="Delta Robot Inverse Kinematics"
                     children="Function to calculate input angles of a delta robot (for Lego NXT)."
-                    link="/here"
+                    link="https://github.com/AmartyaBarua/LegoNXT2.0_DeltaRobot"
                   />
                 </div>
               );
-            case "AI":
+            case "ai":
               return (
                 <div
                   css={{
@@ -178,17 +180,58 @@ function Body() {
                   <Collapsible
                     title="Kaggle CareerCon 2019"
                     children="Kaggle machine learning competition. 89% model accuracy."
-                    link="/link"
+                    link="https://github.com/AmartyaBarua/Kaggle-CareerCon-2019"
                   />
                   <Collapsible
                     title="Animation Recommender System"
                     children="Netflix like recommender system. Made with Python."
-                    link="/link"
+                    link="https://github.com/AmartyaBarua/AnimationRecommenderSystem"
+                  />
+                </div>
+              );
+            case "React":
+              return (
+                <div
+                  css={{
+                    display: "flex",
+                    flexFlow: "column nowrap",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <Collapsible
+                    title="This website!"
+                    children="This responsive single page web app was built using React."
+                    link="/index"
                   />
                 </div>
               );
             default:
-              return null;
+              return (
+                <div
+                  css={{
+                    display: "flex",
+                    flexFlow: "column nowrap",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <Collapsible
+                    title="Nobias Data Visualization App"
+                    children="Single page application to visualize trends in user browsing
+                    history. Made for Nobias as part of my interview."
+                    link="https://github.com/AmartyaBarua/nobias-data-visualisation"
+                  />
+                  <Collapsible
+                    title="Kaggle CareerCon 2019"
+                    children="Kaggle machine learning competition. 89% model accuracy."
+                    link="https://github.com/AmartyaBarua/Kaggle-CareerCon-2019"
+                  />
+                  <Collapsible
+                    title="Animation Recommender System"
+                    children="Netflix like recommender system. Made with Python."
+                    link="https://github.com/AmartyaBarua/AnimationRecommenderSystem"
+                  />
+                </div>
+              );
           }
         })()}
       </div>
