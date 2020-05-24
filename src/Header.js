@@ -1,12 +1,12 @@
 /** @jsx jsx */ //need this for emotion to work with create-react-app
 //used gitignore.io to generate .gitignore file
 
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 import { css, jsx } from "@emotion/core";
 import facepaint from "facepaint";
 
-import home from "./home.png";
+// import home from "./home.png";
 import mark from "./GitHub-Mark-64px.png";
 import linkedin from "./linkedin-logo.png";
 
@@ -46,14 +46,14 @@ const groupStyleMobile = css(
   })
 );
 
-const homeIconSize = css(
-  mq({
-    width: ["32px", "32px", "64px"],
-    height: ["32px", "64"],
-    marginLeft: ".4em",
-    marginBottom: ["none", "none", "2em"],
-  })
-);
+// const homeIconSize = css(
+//   mq({
+//     width: ["32px", "32px", "64px"],
+//     height: ["32px", "64"],
+//     marginLeft: ".4em",
+//     marginBottom: ["none", "none", "2em"],
+//   })
+// );
 
 const headerFontStyle = css(
   mq({

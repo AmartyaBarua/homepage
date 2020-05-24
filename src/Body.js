@@ -1,7 +1,7 @@
 /** @jsx jsx */ //need this for emotion to work with create-react-app
 
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import { useState } from "react";
+// import ReactDOM from "react-dom";
 import { css, jsx } from "@emotion/core";
 import facepaint from "facepaint";
 
